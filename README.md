@@ -1,135 +1,57 @@
-# iHerb Review Automation Bot
-
-This project automates the process of submitting reviews on the iHerb website using Selenium WebDriver.
+# iHerb Reviewer
 
 ## Prerequisites
 
-- Python 3.x
-- Google Chrome
-- ChromeDriver
-- Git
-
-## Setup Instructions
-
 ### macOS
-
-1. **Install Python**:
+1. Install Python:
     ```sh
     brew install python
     ```
-
-2. **Install Google Chrome**:
-    Download and install from [Google Chrome](https://www.google.com/chrome/).
-
-3. **Install ChromeDriver**:
+2. Install Google Chrome:
+    ```sh
+    brew install --cask google-chrome
+    ```
+3. Install ChromeDriver:
     ```sh
     brew install chromedriver
     ```
-
-4. **Clone the repository**:
+4. Install required Python packages:
     ```sh
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
-    ```
-
-5. **Install required Python packages**:
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-### Windows
-
-1. **Install Python**:
-    Download and install from [Python](https://www.python.org/downloads/).
-
-2. **Install Google Chrome**:
-    Download and install from [Google Chrome](https://www.google.com/chrome/).
-
-3. **Install ChromeDriver**:
-    Download the ChromeDriver from [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) and add it to your PATH.
-
-4. **Clone the repository**:
-    ```sh
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
-    ```
-
-5. **Install required Python packages**:
-    ```sh
-    pip install -r requirements.txt
+    pip install selenium
     ```
 
 ### Linux
-
-1. **Install Python**:
+1. Install Python:
     ```sh
-    sudo apt-get install python3
+    sudo apt-get update
+    sudo apt-get install -y python3 python3-pip
+    ```
+2. Install Google Chrome:
+    ```sh
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+    sudo apt-get install -f
+    ```
+3. Install ChromeDriver:
+    ```sh
+    sudo apt-get install -y chromedriver
+    ```
+4. Install required Python packages:
+    ```sh
+    pip3 install selenium
     ```
 
-2. **Install Google Chrome**:
-    Download and install from [Google Chrome](https://www.google.com/chrome/).
-
-3. **Install ChromeDriver**:
+### Windows
+1. Manually install the following prerequisites:
+    - [Python](https://www.python.org/downloads/)
+    - [Google Chrome](https://www.google.com/chrome/)
+    - [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+2. Install required Python packages:
     ```sh
-    sudo apt-get install chromedriver
+    pip install selenium
     ```
 
-4. **Clone the repository**:
-    ```sh
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
-    ```
-
-5. **Install required Python packages**:
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-## Running the Script
-
-1. **Start Chrome with remote debugging**:
-    ```sh
-    google-chrome --remote-debugging-port=9222
-    ```
-
-2. **Run the script**:
-    ```sh
-    python bot.py
-    ```
-
-## Uploading to GitHub
-
-1. **Initialize a new Git repository**:
-    ```sh
-    git init
-    ```
-
-2. **Add all files to the repository**:
-    ```sh
-    git add .
-    ```
-
-3. **Commit the changes**:
-    ```sh
-    git commit -m "Initial commit"
-    ```
-
-4. **Add the remote repository**:
-    ```sh
-    git remote add origin https://github.com/yourusername/your-repo-name.git
-    ```
-
-5. **Push the changes to GitHub**:
-    ```sh
-    git push -u origin master
-    ```
-
-## License
-
-This project is licensed under the MIT License.
-
-
-### Usage Instructions
+## Usage Instructions
 
 1. **Start Chrome with Remote Debugging**:
     - Open a terminal or command prompt.
@@ -154,5 +76,29 @@ This project is licensed under the MIT License.
     - The script will automatically fill in the review title, required themes, review text, rate the product with 5 stars, and submit the review form.
     - If there are more review titles, the script will continue to process them until all reviews are submitted.
 
-### Note
-- Ensure that you have installed all the prerequisites and set up the environment as described in the `README.md` and `prerequisites.sh` files.
+## Upload to GitHub
+
+1. **Initialize a new Git repository**:
+    ```sh
+    git init
+    ```
+
+2. **Add all files to the repository**:
+    ```sh
+    git add .
+    ```
+
+3. **Commit the changes**:
+    ```sh
+    git commit -m "Initial commit"
+    ```
+
+4. **Add the remote repository**:
+    ```sh
+    git remote add origin git@github.com:avielj/iherbreviewer.git
+    ```
+
+5. **Push the changes to GitHub**:
+    ```sh
+    git push -u origin master
+    ```
