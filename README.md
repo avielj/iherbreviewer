@@ -65,7 +65,7 @@
     - Navigate to the directory where the script is located.
     - Run the script using Python:
       ```sh
-      python bot.py
+      python main.py
       ```
 
 3. **Select the Product to Review**:
